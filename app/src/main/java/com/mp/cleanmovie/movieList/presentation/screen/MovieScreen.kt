@@ -16,9 +16,8 @@ fun MovieScreen(viewModel: MovieListViewModel = hiltViewModel()) {
     val uiState = viewModel.uiState.collectAsState()
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Text(text = "This is a test")
 
-        LazyColumn {
+        LazyColumn(modifier = Modifier.fillMaxSize()) {
             items(uiState.value.result) { movie ->
                 Text(text = movie.title ?: "")
             }

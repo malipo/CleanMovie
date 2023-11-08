@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.data.model
+package com.mp.cleanmovie.core.data.model
 
 data class MovieData(
     var backdrop: String? = null,

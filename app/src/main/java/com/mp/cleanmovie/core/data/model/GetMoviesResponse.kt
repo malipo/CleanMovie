@@ -1,3 +1,3 @@
-package com.mp.cleanmovie.data.model
+package com.mp.cleanmovie.core.data.model
 
 data class GetMoviesResponse(var movies: List<MovieData>)

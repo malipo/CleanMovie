@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.presentation.dashboard
+package com.mp.cleanmovie.core.presentation.dashboard
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -19,7 +19,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.mp.cleanmovie.presentation.navigation.DashboardGraph
+import com.mp.cleanmovie.core.presentation.navigation.DashboardGraph
 
 
 @Composable

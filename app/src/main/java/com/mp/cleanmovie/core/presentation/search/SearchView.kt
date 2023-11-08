@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.presentation.home
+package com.mp.cleanmovie.core.presentation.search
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -7,41 +7,41 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.NavHostController
 
+
 @Composable
-fun HomeNavigate(
+fun SearchNavigate(
     navController: NavHostController,
 ) {
-    HomeContent(
-        viewModel = hiltViewModel()
-    )
+    SearchContent(
+        viewModel = hiltViewModel())
 }
 
 @Composable
-fun HomeContent(
-    viewModel: HomeViewModel,
+fun SearchContent(
+    viewModel: SearchViewModel,
 ) {
-    HomeScreen()
+    SearchScreen()
 }
-@Composable
-private fun HomeScreen(){
 
+@Composable
+private fun SearchScreen() {
     Column(modifier = Modifier.fillMaxWidth().padding(10.dp)) {
         Text(
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Start,
-            text ="home",
+            text ="movie",
             maxLines = 1,
             fontSize = MaterialTheme.typography.labelMedium.fontSize,
             fontWeight = FontWeight.Medium
         )
     }
 }
-
-
 

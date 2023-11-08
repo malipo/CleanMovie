@@ -1,8 +1,9 @@
 package com.mp.cleanmovie.movieList.presentation.viewModel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mp.cleanmovie.data.model.MovieData
+import com.mp.cleanmovie.core.data.model.MovieData
 import com.mp.cleanmovie.movieList.domain.usecase.FetchMovieListUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -32,6 +33,8 @@ class MovieListViewModel @Inject constructor(
                 .collectLatest {
                     val response = it.movies
                     val newUiState = _uiState.value.copy(result = response)
+
+                    Log.d("TAG", "fetchMovies: $newUiState")
                     _uiState.emit(newUiState)
                 }
         }

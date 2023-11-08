@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.presentation.search
+package com.mp.cleanmovie.core.presentation.search
 
 import androidx.lifecycle.ViewModel
 

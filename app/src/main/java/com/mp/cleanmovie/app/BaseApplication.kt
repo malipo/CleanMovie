@@ -1,4 +1,4 @@
-package com.mp.cleanmovie
+package com.mp.cleanmovie.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

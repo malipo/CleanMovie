@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.data.di
+package com.mp.cleanmovie.core.di
 
 
 import com.mp.cleanmovie.movieList.domain.repository.MovieListRepository

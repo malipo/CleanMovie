@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.presentation.home
+package com.mp.cleanmovie.core.presentation.home
 
 import androidx.lifecycle.ViewModel
 import com.mp.cleanmovie.movieList.domain.repository.MovieListRepository
