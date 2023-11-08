@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.data.repository.home
+package com.mp.cleanmovie.movieList.domain.repository
 
 import androidx.annotation.WorkerThread
 
@@ -6,7 +6,7 @@ import com.mp.cleanmovie.data.model.GetMoviesResponse
 
 import kotlinx.coroutines.flow.Flow
 
-interface HomeRepository {
+interface MovieListRepository {
 
     @WorkerThread
     suspend fun getMovies(): Flow<GetMoviesResponse>

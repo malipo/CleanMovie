@@ -1,8 +1,6 @@
 package com.mp.cleanmovie.data.di
 
-import com.mp.cleanmovie.common.Consts
-import com.mp.cleanmovie.data.service.ApiClient
-import com.mp.cleanmovie.data.service.ApiService
+import com.mp.cleanmovie.core.Consts
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -24,7 +22,6 @@ object NetworkModule {
     @Singleton
     @Named(Consts.RATES_API)
     fun provideRatesUrl() = Consts.RATES_API
-
 
     @Provides
     @Singleton
@@ -55,24 +52,25 @@ object NetworkModule {
     @Singleton
     fun provideRetrofitClient(
         okHttp: OkHttpClient,
-        moshiConverterFactory: MoshiConverterFactory
+        moshiConverterFactory: MoshiConverterFactory,
+        @Named(Consts.RATES_API) url: String,
     ): Retrofit = Retrofit.Builder()
         .addConverterFactory(moshiConverterFactory)
 //        .addCallAdapterFactory(CallAdapterFactory.create())
         .client(okHttp)
-        .baseUrl(provideRatesUrl())
+        .baseUrl(url)
         .build()
 
-    @Provides
-    @Singleton
-    fun provideApiService(retrofit: Retrofit): ApiService {
-        return retrofit.create(ApiService::class.java)
-    }
-//TODO we should have ApiClient ?
-    @Provides
-    @Singleton
-    fun provideApiClient(apiService: ApiService): ApiClient {
-        return ApiClient(apiService)
-    }
-
+//    @Provides
+//    @Singleton
+//    fun provideApiService(retrofit: Retrofit): MovieListApi {
+//        return retrofit.create(MovieListApi::class.java)
+//    }
+//
+//    // TODO we should have ApiClient ?
+//    @Provides
+//    @Singleton
+//    fun provideApiClient(movieListApi: MovieListApi): ApiClient {
+//        return ApiClient(movieListApi)
+//    }
 }
