@@ -20,4 +20,4 @@ Uses concepts of the notorious Uncle Bob's architecture called [Clean Architectu
 * Features can be developed in parallel eg. by different teams
 * Each feature can be developed in isolation, independently from other features
 * faster compile time
-<img src="art/app_architecture.png">
+
