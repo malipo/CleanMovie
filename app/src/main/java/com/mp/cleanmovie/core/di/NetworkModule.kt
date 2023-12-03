@@ -15,13 +15,13 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
-@InstallIn(SingletonComponent::class)
+@InstallIn(SingletonComponent::class) //what is this scope?(singletonComponent)
 object NetworkModule {
 
-    @Provides
-    @Singleton
-    @Named(Consts.RATES_API)
-    fun provideRatesUrl() = Consts.RATES_API
+    @Provides  //@provide vs @bind
+    @Singleton //why write Singleton in every fun?
+    @Named(Consts.BASE_API)
+    fun provideRatesUrl() = Consts.BASE_API
 
     @Provides
     @Singleton
@@ -53,24 +53,11 @@ object NetworkModule {
     fun provideRetrofitClient(
         okHttp: OkHttpClient,
         moshiConverterFactory: MoshiConverterFactory,
-        @Named(Consts.RATES_API) url: String,
+        @Named(Consts.BASE_API) url: String,
     ): Retrofit = Retrofit.Builder()
         .addConverterFactory(moshiConverterFactory)
-//        .addCallAdapterFactory(CallAdapterFactory.create())
         .client(okHttp)
         .baseUrl(url)
         .build()
 
-//    @Provides
-//    @Singleton
-//    fun provideApiService(retrofit: Retrofit): MovieListApi {
-//        return retrofit.create(MovieListApi::class.java)
-//    }
-//
-//    // TODO we should have ApiClient ?
-//    @Provides
-//    @Singleton
-//    fun provideApiClient(movieListApi: MovieListApi): ApiClient {
-//        return ApiClient(movieListApi)
-//    }
 }
