@@ -51,27 +51,28 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("com.google.android.material:material:1.10.0")
-
+    //compose
     implementation("androidx.activity:activity-compose:1.8.0")
     implementation("androidx.compose.ui:ui:1.5.4")
     implementation("androidx.compose.ui:ui-tooling-preview:1.5.4")
     implementation("androidx.compose.material3:material3:1.1.2")
     implementation("androidx.compose.material:material-icons-extended:1.5.4")
-
+    implementation("io.coil-kt:coil-compose:2.4.0")// Load and Display the Image from url
+    //navigation
     implementation("androidx.navigation:navigation-compose:2.7.4")
 
-
+    //hilt(DI)
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation("com.google.dagger:hilt-android:2.47")
     kapt("com.google.dagger:hilt-compiler:2.47")
-
+    //retrofit (network)
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
     implementation("com.squareup.moshi:moshi:1.10.0")
     implementation("com.squareup.moshi:moshi-kotlin:1.10.0")
     implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
     kapt("com.squareup.moshi:moshi-kotlin-codegen:1.10.0")
-
+   //test
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

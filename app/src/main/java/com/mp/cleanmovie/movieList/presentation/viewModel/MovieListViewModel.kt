@@ -24,7 +24,16 @@ class MovieListViewModel @Inject constructor(
     init {
         fetchMovies()
     }
-
+    data class MovieListUiState(
+        val movies: List<MovieData> = emptyList(),
+    ){
+        fun getMoviesByGenre(): Map<String, List<MovieData>> {
+            val genres = movies.flatMap { it.genres!! }.distinct().sortedBy { it }
+            return genres.associateWith { genre ->
+                movies.filter { it.genres!!.contains(genre) }.sortedBy { it.title }
+            }
+        }
+    }
     private fun fetchMovies() {
         viewModelScope.launch {
             fetchMovieListUseCase
@@ -32,7 +41,7 @@ class MovieListViewModel @Inject constructor(
                 .catch { throw it }
                 .collectLatest {
                     val response = it.movies
-                    val newUiState = _uiState.value.copy(result = response)
+                    val newUiState = _uiState.value.copy(movies = response)
 
                     Log.d("TAG", "fetchMovies: $newUiState")
                     _uiState.emit(newUiState)
@@ -41,9 +50,7 @@ class MovieListViewModel @Inject constructor(
     }
 }
 
-data class MovieListUiState(
-    val result: List<MovieData> = emptyList(),
-)
+
 
 // event (MVI)
 
