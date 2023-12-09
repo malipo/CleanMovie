@@ -14,5 +14,8 @@ data class MovieData(
     val released_on: String? = null,
     val slug: String? = null,
     val title: String? = null
-)
-
+) {
+    fun getTitleRate(): String {
+        return "$title (IMDB:$imdb_rating)"
+    }
+}

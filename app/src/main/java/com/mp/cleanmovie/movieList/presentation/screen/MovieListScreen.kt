@@ -34,15 +34,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.mp.cleanmovie.core.data.model.MovieData
 import com.mp.cleanmovie.movieList.presentation.viewModel.MovieListViewModel
 import com.mp.cleanmovie.R
+import com.mp.cleanmovie.app.navigation.navigateToDetail
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MovieScreen(viewModel: MovieListViewModel = hiltViewModel(),
+fun MovieListScreen(navController: NavHostController,
+                    viewModel: MovieListViewModel = hiltViewModel(),
             ) {
     val uiState = viewModel.uiState.collectAsState()
 
@@ -62,8 +65,9 @@ fun MovieScreen(viewModel: MovieListViewModel = hiltViewModel(),
                     GenreItem(
                         genre,
                         movies,
-                        onClickMovie = { movie ->
-//ToDo
+                        onClickMovie = {movie->
+                            viewModel.setMovieSelected(movie)
+                            navController.navigateToDetail()
                         })
                 }
             }
