@@ -1,6 +1,6 @@
 package com.mp.cleanmovie.movieList.di.module
 
-import com.mp.cleanmovie.movieList.data.dataSource.remote.api.MovieListApi
+import com.mp.cleanmovie.movieList.data.remote.api.MovieListApi
 import com.mp.cleanmovie.movieList.domain.usecase.FetchMovieDetailUseCase
 import dagger.Module
 import dagger.Provides

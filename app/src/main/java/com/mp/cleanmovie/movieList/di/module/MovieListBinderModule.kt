@@ -1,7 +1,7 @@
 package com.mp.cleanmovie.movieList.di.module
 
-import com.mp.cleanmovie.movieList.data.dataSource.remote.MovieListRemoteDataSource
-import com.mp.cleanmovie.movieList.data.dataSource.remote.MovieListRemoteDataSourceImpl
+import com.mp.cleanmovie.movieList.data.remote.MovieListRemoteDataSource
+import com.mp.cleanmovie.movieList.data.remote.MovieListRemoteDataSourceImpl
 import com.mp.cleanmovie.movieList.data.repository.MovieListRepositoryImpl
 import com.mp.cleanmovie.movieList.domain.repository.MovieListRepository
 import dagger.Binds

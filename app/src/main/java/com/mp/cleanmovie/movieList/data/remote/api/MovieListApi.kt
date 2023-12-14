@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.movieList.data.dataSource.remote.api
+package com.mp.cleanmovie.movieList.data.remote.api
 
 import com.mp.cleanmovie.core.data.model.GetMoviesResponse
 import retrofit2.http.GET

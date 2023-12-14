@@ -1,7 +1,7 @@
-package com.mp.cleanmovie.movieList.data.dataSource.remote
+package com.mp.cleanmovie.movieList.data.remote
 
 import com.mp.cleanmovie.core.data.model.GetMoviesResponse
-import com.mp.cleanmovie.movieList.data.dataSource.remote.api.MovieListApi
+import com.mp.cleanmovie.movieList.data.remote.api.MovieListApi
 import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

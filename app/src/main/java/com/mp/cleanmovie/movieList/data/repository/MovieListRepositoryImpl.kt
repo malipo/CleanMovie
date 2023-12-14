@@ -1,6 +1,6 @@
 package com.mp.cleanmovie.movieList.data.repository
 
-import com.mp.cleanmovie.movieList.data.dataSource.remote.MovieListRemoteDataSource
+import com.mp.cleanmovie.movieList.data.remote.MovieListRemoteDataSource
 import com.mp.cleanmovie.movieList.domain.repository.MovieListRepository
 import javax.inject.Inject
 
