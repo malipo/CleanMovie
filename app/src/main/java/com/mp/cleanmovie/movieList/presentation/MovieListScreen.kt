@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.movieList.presentation.screen
+package com.mp.cleanmovie.movieList.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -36,10 +36,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.mp.cleanmovie.movieList.presentation.viewModel.MovieListViewModel
 import com.mp.cleanmovie.R
 import com.mp.cleanmovie.app.navigation.navigateToDetail
-import com.mp.cleanmovie.movieList.domain.model.DomainMovieData
+import com.mp.cleanmovie.core.domain.model.DomainMovieData
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

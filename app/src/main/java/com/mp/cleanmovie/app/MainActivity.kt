@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.compose.rememberNavController
 import com.mp.cleanmovie.app.navigation.AppNavHost
-import com.mp.cleanmovie.movieList.presentation.screen.MovieListScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint // it marks a class as a target for Hilt's dependency injection

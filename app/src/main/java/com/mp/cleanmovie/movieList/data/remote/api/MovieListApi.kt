@@ -1,6 +1,6 @@
 package com.mp.cleanmovie.movieList.data.remote.api
 
-import com.mp.cleanmovie.core.data.model.GetMoviesResponse
+import com.mp.cleanmovie.movieList.data.remote.model.GetMoviesResponse
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query

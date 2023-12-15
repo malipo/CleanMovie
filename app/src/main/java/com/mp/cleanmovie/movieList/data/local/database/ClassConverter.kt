@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.movieList.data.local
+package com.mp.cleanmovie.movieList.data.local.database
 
 import androidx.room.TypeConverter
 import com.squareup.moshi.Moshi

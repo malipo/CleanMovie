@@ -1,10 +1,10 @@
 package com.mp.cleanmovie.movieList.data.repository
 
-import com.mp.cleanmovie.core.data.model.MovieData
-import com.mp.cleanmovie.movieList.data.local.MovieEntity
+import com.mp.cleanmovie.movieList.data.remote.model.MovieData
+import com.mp.cleanmovie.movieList.data.local.database.MovieEntity
 import com.mp.cleanmovie.movieList.data.local.MovieListLocalDataSource
 import com.mp.cleanmovie.movieList.data.remote.MovieListRemoteDataSource
-import com.mp.cleanmovie.movieList.domain.model.DomainMovieData
+import com.mp.cleanmovie.core.domain.model.DomainMovieData
 import com.mp.cleanmovie.movieList.domain.repository.MovieListRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collectLatest

@@ -1,9 +1,9 @@
-package com.mp.cleanmovie.movieList.presentation.viewModel
+package com.mp.cleanmovie.movieList.presentation
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mp.cleanmovie.movieList.domain.model.DomainMovieData
+import com.mp.cleanmovie.core.domain.model.DomainMovieData
 import com.mp.cleanmovie.movieList.domain.usecase.FetchMovieListUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

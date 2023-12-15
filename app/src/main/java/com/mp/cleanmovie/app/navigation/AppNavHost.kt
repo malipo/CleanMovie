@@ -7,8 +7,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.mp.cleanmovie.movieList.presentation.screen.MovieDetailScreen
-import com.mp.cleanmovie.movieList.presentation.screen.MovieListScreen
+import com.mp.cleanmovie.movieDetails.presentation.MovieDetailScreen
+import com.mp.cleanmovie.movieList.presentation.MovieListScreen
 
 @Composable
 fun AppNavHost(

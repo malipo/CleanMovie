@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.movieList.domain.model
+package com.mp.cleanmovie.core.domain.model
 
 data class DomainMovieData(
     val backdrop: String,

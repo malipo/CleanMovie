@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.core.data.model
+package com.mp.cleanmovie.movieList.data.remote.model
 
 data class MovieData(
     val backdrop: String? = null,

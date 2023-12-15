@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.movieList.presentation.screen
+package com.mp.cleanmovie.movieDetails.presentation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.IntrinsicSize
@@ -34,7 +34,6 @@ import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.mp.cleanmovie.R
-import com.mp.cleanmovie.movieList.presentation.viewModel.MovieDetailViewModel
 
 @Composable
 fun MovieDetailScreen(

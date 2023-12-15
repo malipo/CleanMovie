@@ -1,8 +1,8 @@
 package com.mp.cleanmovie.core.di
 import android.content.Context
 import androidx.room.Room
-import com.mp.cleanmovie.movieList.data.local.MovieDao
-import com.mp.cleanmovie.movieList.data.local.MovieDataBase
+import com.mp.cleanmovie.movieList.data.local.database.MovieDao
+import com.mp.cleanmovie.movieList.data.local.database.MovieDataBase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

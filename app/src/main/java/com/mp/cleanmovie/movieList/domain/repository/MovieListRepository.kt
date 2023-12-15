@@ -1,7 +1,7 @@
 package com.mp.cleanmovie.movieList.domain.repository
 
 
-import com.mp.cleanmovie.movieList.domain.model.DomainMovieData
+import com.mp.cleanmovie.core.domain.model.DomainMovieData
 
 import kotlinx.coroutines.flow.Flow
 

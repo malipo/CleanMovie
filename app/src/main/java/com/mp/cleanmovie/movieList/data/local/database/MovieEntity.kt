@@ -1,10 +1,8 @@
-package com.mp.cleanmovie.movieList.data.local
+package com.mp.cleanmovie.movieList.data.local.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 @Entity(tableName = "movies_table")
 data class MovieEntity(
