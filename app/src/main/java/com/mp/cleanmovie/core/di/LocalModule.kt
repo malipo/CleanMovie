@@ -12,15 +12,14 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class LocalModule {
-    companion object {
+ object LocalModule {
         @Provides
         @Singleton
         fun provideDatabase(
             @ApplicationContext context: Context
         ): MovieDataBase {
             return Room.databaseBuilder(context, MovieDataBase::class.java, "movie_database.db").build()
-        }
+
     }
     @Provides
     fun provideMovieDao(movieDataBase: MovieDataBase): MovieDao {

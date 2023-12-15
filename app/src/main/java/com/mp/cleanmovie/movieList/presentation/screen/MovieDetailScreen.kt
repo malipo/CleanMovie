@@ -20,11 +20,13 @@ import com.mp.cleanmovie.movieList.presentation.viewModel.MovieDetailViewModel
 
 @Composable
 fun MovieDetailScreen(
+    movieId:String,
     navController: NavHostController,
     viewModel: MovieDetailViewModel = hiltViewModel(),
 ) {
-    val uiState = viewModel.uiState.collectAsState()
 
+    val uiState = viewModel.uiState.collectAsState()
+    viewModel.submitMovieId(movieId)
     LazyColumn(
         modifier = Modifier
             .fillMaxWidth()

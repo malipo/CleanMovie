@@ -37,10 +37,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.mp.cleanmovie.core.data.model.MovieData
 import com.mp.cleanmovie.movieList.presentation.viewModel.MovieListViewModel
 import com.mp.cleanmovie.R
 import com.mp.cleanmovie.app.navigation.navigateToDetail
+import com.mp.cleanmovie.movieList.domain.model.DomainMovieData
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -66,8 +66,8 @@ fun MovieListScreen(navController: NavHostController,
                         genre,
                         movies,
                         onClickMovie = {movie->
-                            viewModel.setMovieSelected(movie)
-                            navController.navigateToDetail()
+//                            viewModel.setMovieSelected(movie)
+                            navController.navigateToDetail(movie.id)
                         })
                 }
             }
@@ -77,8 +77,8 @@ fun MovieListScreen(navController: NavHostController,
 @Composable
 private fun GenreItem(
     title: String,
-    movies: List<MovieData>,
-    onClickMovie: (movie: MovieData) -> Unit,
+    movies: List<DomainMovieData>,
+    onClickMovie: (movie: DomainMovieData) -> Unit,
 ) {
     Column(
         modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
@@ -102,8 +102,8 @@ private fun GenreItem(
 
 @Composable
 private fun MovieItem(
-    movie: MovieData,
-    onClickMovie: (movie: MovieData) -> Unit,
+    movie: DomainMovieData,
+    onClickMovie: (movie: DomainMovieData) -> Unit,
 ) {
     Column(
         modifier = Modifier.padding(10.dp).clickable { onClickMovie(movie) },

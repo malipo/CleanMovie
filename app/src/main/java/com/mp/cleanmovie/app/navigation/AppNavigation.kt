@@ -7,6 +7,6 @@ class AppNavigation {
     }
     sealed class NavigationItem(val route: String) {
         object MovieList : NavigationItem(Screen.MOVIE_LIST.name)
-        object MovieDetail : NavigationItem(Screen.MOVIE_DETAIL.name)
+        object MovieDetail : NavigationItem("${Screen.MOVIE_DETAIL}/{movieId}")
     }
 }

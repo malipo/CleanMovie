@@ -9,10 +9,16 @@ import javax.inject.Inject
 class MovieListLocalDataSourceImpl @Inject constructor(
     private val movieDao: MovieDao,
 ) : MovieListLocalDataSource {
-    override suspend fun getMovies(): Flow<MovieEntity> {
-        return flow {
-            val response = movieDao.getMovies()
+    override suspend fun getMovies(): Flow<List<MovieEntity>> {
+        return movieDao.getMovies()
 
-        }
+    }
+
+    override suspend fun insertMovies(list: List<MovieEntity>) {
+        movieDao.insertMovies(list)
+    }
+
+    override suspend fun getSelectedMovie(id: String): MovieEntity {
+        return movieDao.getSelectedMovie(id)
     }
 }
