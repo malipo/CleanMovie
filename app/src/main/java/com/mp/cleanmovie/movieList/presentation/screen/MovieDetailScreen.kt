@@ -34,7 +34,6 @@ import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.mp.cleanmovie.R
-
 import com.mp.cleanmovie.movieList.presentation.viewModel.MovieDetailViewModel
 
 @Composable

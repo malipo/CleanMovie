@@ -1,6 +1,5 @@
 package com.mp.cleanmovie.movieList.presentation.screen
 
-
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -44,16 +43,20 @@ import com.mp.cleanmovie.movieList.domain.model.DomainMovieData
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MovieListScreen(navController: NavHostController,
-                    viewModel: MovieListViewModel = hiltViewModel(),
-            ) {
+fun MovieListScreen(
+    navController: NavHostController,
+    viewModel: MovieListViewModel = hiltViewModel(),
+) {
     val uiState = viewModel.uiState.collectAsState()
 
     Scaffold(
         topBar = { TopAppBar(title = { Text(stringResource(R.string.home_title)) }) },
         content = { innerPadding ->
             LazyColumn(
-                modifier = Modifier.fillMaxSize().background(Color(194, 194, 194, 255)).padding(innerPadding),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color(194, 194, 194, 255))
+                    .padding(innerPadding),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 val moviesData = uiState.value.getMoviesByGenre()
@@ -65,8 +68,7 @@ fun MovieListScreen(navController: NavHostController,
                     GenreItem(
                         genre,
                         movies,
-                        onClickMovie = {movie->
-//                            viewModel.setMovieSelected(movie)
+                        onClickMovie = { movie ->
                             navController.navigateToDetail(movie.id)
                         })
                 }
@@ -81,12 +83,16 @@ private fun GenreItem(
     onClickMovie: (movie: DomainMovieData) -> Unit,
 ) {
     Column(
-        modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
+        modifier = Modifier
+            .fillMaxWidth()
+            .wrapContentSize(Alignment.Center)
+    ) {
         Text(
             modifier = Modifier.padding(start = 10.dp),
             text = title,
             fontSize = MaterialTheme.typography.headlineMedium.fontSize,
-            fontWeight = FontWeight.Bold)
+            fontWeight = FontWeight.Bold
+        )
         LazyRow(
             modifier = Modifier.fillMaxWidth(),
         ) {
@@ -106,11 +112,14 @@ private fun MovieItem(
     onClickMovie: (movie: DomainMovieData) -> Unit,
 ) {
     Column(
-        modifier = Modifier.padding(10.dp).clickable { onClickMovie(movie) },
+        modifier = Modifier
+            .padding(10.dp)
+            .clickable { onClickMovie(movie) },
     ) {
         Box(
             modifier =
-            Modifier.size(width = 100.dp, height = 100.dp)
+            Modifier
+                .size(width = 100.dp, height = 100.dp)
                 .clip(RoundedCornerShape(16.dp))
                 .background(Color.White),
             contentAlignment = Alignment.Center
@@ -124,11 +133,15 @@ private fun MovieItem(
                 placeholder = painterResource(R.drawable.placeholder),
                 contentDescription = stringResource(R.string.description),
                 contentScale = ContentScale.Crop,
-                modifier = Modifier.width(100.dp).height(150.dp)
+                modifier = Modifier
+                    .width(100.dp)
+                    .height(150.dp)
             )
         }
         Text(
-            modifier = Modifier.width(100.dp).padding(top = 5.dp),
+            modifier = Modifier
+                .width(100.dp)
+                .padding(top = 5.dp),
             textAlign = TextAlign.Center,
             text = movie.title ?: "",
             maxLines = 1,
