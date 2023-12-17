@@ -1,6 +1,6 @@
-package com.mp.cleanmovie.movieDetails.data.repository
+package com.mp.cleanmovie.movieDetail.data.repository
 
-import com.mp.cleanmovie.movieDetails.domain.repository.MovieDetailRepository
+import com.mp.cleanmovie.movieDetail.domain.repository.MovieDetailRepository
 import com.mp.cleanmovie.movieList.data.local.database.MovieEntity
 import com.mp.cleanmovie.movieList.data.local.MovieListLocalDataSource
 import com.mp.cleanmovie.core.domain.model.DomainMovieData

@@ -1,7 +1,7 @@
-package com.mp.cleanmovie.movieDetails.domain.usecase
+package com.mp.cleanmovie.movieDetail.domain.usecase
 
 
-import com.mp.cleanmovie.movieDetails.domain.repository.MovieDetailRepository
+import com.mp.cleanmovie.movieDetail.domain.repository.MovieDetailRepository
 import com.mp.cleanmovie.core.domain.model.DomainMovieData
 import dagger.hilt.android.scopes.ViewModelScoped
 import javax.inject.Inject

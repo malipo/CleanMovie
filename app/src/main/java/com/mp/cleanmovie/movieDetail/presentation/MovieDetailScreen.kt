@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.movieDetails.presentation
+package com.mp.cleanmovie.movieDetail.presentation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.IntrinsicSize

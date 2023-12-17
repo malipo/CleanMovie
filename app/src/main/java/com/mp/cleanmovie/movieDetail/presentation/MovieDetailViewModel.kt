@@ -1,10 +1,10 @@
-package com.mp.cleanmovie.movieDetails.presentation
+package com.mp.cleanmovie.movieDetail.presentation
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mp.cleanmovie.core.domain.model.DomainMovieData
-import com.mp.cleanmovie.movieDetails.domain.usecase.FetchMovieDetailUseCase
+import com.mp.cleanmovie.movieDetail.domain.usecase.FetchMovieDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

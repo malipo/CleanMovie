@@ -1,4 +1,4 @@
-package com.mp.cleanmovie.movieDetails.data.local.datasource
+package com.mp.cleanmovie.movieDetail.data.local.datasource
 
 import com.mp.cleanmovie.movieList.data.local.database.MovieDao
 import com.mp.cleanmovie.movieList.data.local.database.MovieEntity
